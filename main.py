@@ -9,6 +9,7 @@ from google.genai import types
 from prompts import system_prompt
 from call_function import available_functions
 
+
 def main():
     load_dotenv()
 
@@ -54,6 +55,7 @@ def generate_content(client, messages, verbose):
 
     for function_call_part in response.function_calls:
         print(f'Calling function: {function_call_part.name}({function_call_part.args})')
+
 
 if __name__ == '__main__':
     main()
